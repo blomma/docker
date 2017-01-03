@@ -1,9 +1,9 @@
-FROM resin/rpi-raspbian:jessie
+FROM resin/rpi-raspbian:latest
 
 MAINTAINER Mikael Hultgren <blomma@gmail.com>
 
 ARG PYTHON_VERSION
-ENV PYTHON_VERSION=${PYTHON_VERSION:-2.7.12}
+ENV PYTHON_VERSION=${PYTHON_VERSION:-3.6.0}
 
 COPY build.sh /build/
 

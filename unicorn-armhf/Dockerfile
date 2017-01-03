@@ -1,4 +1,4 @@
-FROM blomma/pyenv-3.6.0:1.0.0
+FROM blomma/pyenv-3.6.0:latest
 
 COPY build.sh /build/
 
