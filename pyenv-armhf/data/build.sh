@@ -6,7 +6,20 @@ export DEBIAN_FRONTEND=noninteractive
 
 minimal_apt_get_args='-y --no-install-recommends'
 
-BUILD_PACKAGES="ca-certificates build-essential curl git libbz2-dev libncurses5-dev libreadline-dev libsqlite3-dev libssl-dev make wget zlib1g-dev"
+BUILD_PACKAGES="
+	build-essential
+	ca-certificates
+	curl
+	git
+	libbz2-dev
+	libncurses5-dev
+	libreadline-dev
+	libsqlite3-dev
+	libssl-dev
+	make
+	wget
+	zlib1g-dev
+"
 
 
 ### PREPARE
@@ -33,4 +46,3 @@ apt-get remove --purge -y $BUILD_PACKAGES
 apt-get autoremove --purge -y
 apt-get clean all -y
 rm -rf /var/lib/apt/lists/*
-

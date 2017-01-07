@@ -22,4 +22,3 @@ apt-get remove --purge -y $BUILD_PACKAGES
 apt-get autoremove --purge -y
 apt-get clean all -y
 rm -rf /var/lib/apt/lists/*
-
