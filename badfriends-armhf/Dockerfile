@@ -1,7 +1,8 @@
-FROM resin/rpi-raspbian:latest
+FROM resin/rpi-raspbian:jessie
 
-COPY badrobot /usr/local/bin
+COPY badrobot /badrobot
+COPY badfriends.html /badfriends.html
 
 EXPOSE 8000
 
-CMD ["/usr/local/bin/badrobot"]
+CMD ["/badrobot"]
