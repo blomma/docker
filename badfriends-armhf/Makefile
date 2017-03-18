@@ -8,8 +8,6 @@ print-%  : ; @echo $* = $($*)
 
 build:
 	docker build --pull -t $(IMAGE):$(VERSION) .
-
-push:
 	docker push $(IMAGE):$(VERSION)
 
 create:
