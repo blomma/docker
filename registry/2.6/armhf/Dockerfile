@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:jessie
+FROM armhf/debian:jessie
 
 COPY ./registry/registry /bin/registry
 COPY ./registry/config-example.yml /etc/docker/registry/config.yml

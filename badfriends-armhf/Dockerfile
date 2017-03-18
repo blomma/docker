@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:jessie
+FROM armhf/debian:jessie
 
 COPY badrobot /badrobot
 COPY badfriends.html /badfriends.html
