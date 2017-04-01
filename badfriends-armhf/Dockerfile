@@ -1,4 +1,4 @@
-FROM armhf/debian:jessie
+FROM armhf/debian:jessie-slim
 
 COPY badrobot /badrobot
 COPY badfriends.html /badfriends.html
