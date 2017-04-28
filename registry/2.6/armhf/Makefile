@@ -2,7 +2,7 @@
 
 NAME = registry
 IMAGE = blomma/registry-armhf
-VERSION = 2.6
+VERSION = 2.6.1
 
 print-%  : ; @echo $* = $($*)
 
