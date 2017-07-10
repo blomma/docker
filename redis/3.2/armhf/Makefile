@@ -8,7 +8,9 @@ VERSION = 3.2.9
 print-%  : ; @echo $* = $($*)
 
 build:
-	docker build --pull -t $(IMAGE):$(VERSION) .
+	docker build -t $(IMAGE):$(VERSION) .
+
+push:
 	docker push $(IMAGE):$(VERSION)
 
 pull:
