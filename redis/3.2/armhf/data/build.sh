@@ -29,7 +29,7 @@ set -x \
 # for redis-sentinel see: http://redis.io/topics/sentinel
 set -ex \
 	&& wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL" \
-	&& echo "$REDIS_DOWNLOAD_SHA1 *redis.tar.gz" | sha1sum -c - \
+	&& echo "$REDIS_DOWNLOAD_SHA256 *redis.tar.gz" | sha256sum -c - \
 	&& mkdir -p /usr/src/redis \
 	&& tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \
 	&& rm redis.tar.gz \
@@ -41,8 +41,7 @@ set -ex \
 	&& rm -r /usr/src/redis
 
 ### CLEANUP
-AUTO_ADDED_PACKAGES=`apt-mark showauto`
-apt-get remove --purge -y $BUILD_PACKAGES $AUTO_ADDED_PACKAGES
+apt-get remove --purge -y $BUILD_PACKAGES
 apt-get clean all -y
 
 ### RUNTIME

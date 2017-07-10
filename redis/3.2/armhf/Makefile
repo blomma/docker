@@ -2,8 +2,8 @@
 
 NAME = redis
 NAME_SLAVE = redis-slave
-IMAGE = venkman:5000/redis-armhf
-VERSION = 3.2.8
+IMAGE = venkman.local:5000/redis-armhf
+VERSION = 3.2.9
 
 print-%  : ; @echo $* = $($*)
 

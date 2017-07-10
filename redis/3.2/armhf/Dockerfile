@@ -1,11 +1,11 @@
-FROM armhf/debian:jessie-slim
+FROM arm32v7/debian:stretch-slim
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r redis && useradd -r -g redis redis
 
 ENV GOSU_VERSION 1.10
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.2.8.tar.gz
-ENV REDIS_DOWNLOAD_SHA1 6780d1abb66f33a97aad0edbe020403d0a15b67f
+ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-3.2.9.tar.gz
+ENV REDIS_DOWNLOAD_SHA256 6eaacfa983b287e440d0839ead20c2231749d5d6b78bbe0e0ffa3a890c59ff26
 
 COPY data/01_nodoc /etc/dpkg/dpkg.cfg.d/
 

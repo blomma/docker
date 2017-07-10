@@ -1,4 +1,4 @@
-FROM armhf/debian:jessie-slim
+FROM arm32v7/debian:stretch-slim
 
 COPY ./registry/registry /bin/registry
 COPY ./registry/config-example.yml /etc/docker/registry/config.yml
