@@ -1,0 +1,18 @@
+version: "2"
+services:
+  transmission:
+    image: linuxserver/transmission
+    container_name: transmission
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/Stockholm
+      - TRANSMISSION_WEB_HOME=/combustion-release/
+    volumes:
+      - /transmission/config:/config
+      - /mnt/factory/media/tv:/downloads
+    ports:
+      - 9091:9091
+      - 51413:51413
+      - 51413:51413/udp
+    restart: unless-stopped
