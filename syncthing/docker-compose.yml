@@ -11,8 +11,5 @@ services:
     volumes:
       - /syncthing/config:/config
       - /mnt/factory:/factory
-    ports:
-      - 8384:8384
-      - 22000:22000
-      - 21027:21027/udp
+    network_mode: "host"
     restart: unless-stopped
