@@ -9,7 +9,7 @@ services:
       - TZ=Europe/Stockholm
       - UMASK_SET=<022>
     volumes:
-      - /syncthing/config:/config
-      - /mnt/factory:/factory
+      - /data/syncthing/config:/config
+      - /data/syncthing/data:/data
     network_mode: "host"
     restart: unless-stopped
