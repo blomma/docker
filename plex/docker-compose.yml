@@ -1,0 +1,17 @@
+---
+version: "2.1"
+services:
+  plex:
+    image: linuxserver/plex
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=0
+      - PGID=0
+      - VERSION=docker
+      - UMASK_SET=022
+    volumes:
+      - /docker/plex/config:/config
+      - /mnt/factory/media/tv:/tv
+      - /mnt/factory/media/movies:/movies
+    restart: unless-stopped
