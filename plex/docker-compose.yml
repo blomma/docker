@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   plex:
-    image: linuxserver/plex
+    image: ghcr.io/linuxserver/plex
     container_name: plex
     network_mode: host
     environment:
@@ -13,4 +13,5 @@ services:
       - /docker/plex/config:/config
       - /mnt/factory/media/tv:/tv
       - /mnt/factory/media/movies:/movies
+      - /mnt/factory/media/extras:/extras
     restart: unless-stopped
