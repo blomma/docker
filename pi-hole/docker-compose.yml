@@ -14,8 +14,7 @@ services:
         environment:
             TZ: "Europe/Stockholm"
             ServerIP: "192.168.1.2"
-            DNS1: "213.80.101.3"
-            DNS2: "213.80.98.2"
+            PIHOLE_DNS_: '213.80.101.3;213.80.98.2'
         volumes:
             - "/data/pi-hole/etc/:/etc/pihole/"
             - "/data/pi-hole/etc/dnsmasq.d/:/etc/dnsmasq.d/"
